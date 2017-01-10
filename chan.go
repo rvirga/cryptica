@@ -444,19 +444,22 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					HorizontalWall{0, 4, 6},
+					HorizontalWall{1, 5, 6},
+					HorizontalWall{2, 6, 6},
+					HorizontalWall{2, 0, 0},
+					HorizontalWall{3, 0, 1},
+					HorizontalWall{4, 0, 2},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{2, 2}, {4, 2}, {2, 1}, {4, 1}, {3, 2}, {2, 3}, {4, 3},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{1, 0}, {5, 4},
 		},
+		Steps: 16,
 	},
 	// CHAN 22
 	Game{
@@ -464,19 +467,21 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					HorizontalWall{0, 1, 1},
+					HorizontalWall{0, 5, 5},
+					HorizontalWall{2, 0, 0},
+					HorizontalWall{2, 6, 6},
+					HorizontalWall{4, 3, 3},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{4, 0}, {2, 0}, {4, 1}, {2, 1}, {4, 2}, {2, 2},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{6, 0}, {5, 1}, {6, 4}, {0, 4},
 		},
+		Steps: 18,
 	},
 	// CHAN 23
 	Game{
@@ -484,19 +489,21 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					HorizontalWall{0, 3, 3},
+					HorizontalWall{0, 6, 6},
+					HorizontalWall{2, 3, 3},
+					VerticalWall{0, 2, 4},
+					VerticalWall{6, 3, 4},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{5, 0}, {1, 0}, {3, 1}, {1, 1}, {2, 1}, {4, 1}, {5, 1},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{6, 2}, {0, 0}, {3, 4},
 		},
+		Steps: 16,
 	},
 	// CHAN 24
 	Game{
@@ -504,19 +511,18 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					HorizontalWall{0, 1, 2},
+					HorizontalWall{4, 4, 4},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{5, 4}, {3, 0}, {0, 0}, {4, 0}, {6, 4},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{6, 0}, {1, 4},
 		},
+		Steps: 26,
 	},
 	// CHAN 25
 	Game{
@@ -524,19 +530,21 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					HorizontalWall{1, 3, 3},
+					HorizontalWall{1, 6, 6},
+					HorizontalWall{3, 0, 0},
+					HorizontalWall{3, 3, 3},
+					HorizontalWall{4, 5, 5},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{3, 0}, {3, 4}, {4, 1}, {2, 3},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{0, 2}, {6, 2},
 		},
+		Steps: 18,
 	},
 	// CHAN 26
 	Game{
@@ -544,19 +552,22 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					HorizontalWall{0, 6, 6},
+					HorizontalWall{1, 5, 5},
+					HorizontalWall{2, 4, 4},
+					HorizontalWall{2, 2, 2},
+					HorizontalWall{3, 1, 1},
+					HorizontalWall{4, 0, 0},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{3, 1}, {6, 4}, {3, 3}, {0, 0},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{1, 2}, {5, 2}, {1, 4},
 		},
+		Steps: 20,
 	},
 	// CHAN 27
 	Game{
@@ -564,19 +575,22 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					HorizontalWall{0, 0, 0},
+					HorizontalWall{0, 3, 3},
+					HorizontalWall{1, 4, 4},
+					HorizontalWall{2, 3, 3},
+					HorizontalWall{3, 2, 2},
+					HorizontalWall{4, 3, 3},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{0, 4}, {6, 0}, {4, 0}, {2, 4},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{2, 2}, {3, 3},
 		},
+		Steps: 20,
 	},
 	// CHAN 28
 	Game{
@@ -584,19 +598,24 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					VerticalWall{3, 0, 1},
+					HorizontalWall{1, 1, 1},
+					HorizontalWall{1, 4, 4},
+					HorizontalWall{2, 0, 6},
+					HorizontalWall{3, 3, 3},
+					HorizontalWall{4, 1, 1},
+					HorizontalWall{4, 3, 4},
+					HorizontalWall{4, 6, 6},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{2, 0}, {4, 0}, {2, 4}, {5, 3},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{0, 1}, {6, 0}, {2, 3}, {5, 4},
 		},
+		Steps: 10,
 	},
 	// CHAN 29
 	Game{
@@ -604,19 +623,22 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					HorizontalWall{0, 1, 2},
+					HorizontalWall{4, 4, 5},
+					VerticalWall{0, 0, 4},
+					VerticalWall{6, 0, 4},
+					VerticalWall{1, 3, 4},
+					VerticalWall{5, 0, 1},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{3, 1}, {3, 3}, {2, 1}, {4, 1}, {2, 3}, {4, 3},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{1, 2}, {5, 2},
 		},
+		Steps: 14,
 	},
 	// CHAN 30
 	Game{
@@ -624,18 +646,19 @@ var Chan = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					HorizontalWall{0, 2, 4},
-					HorizontalWall{1, 2, 4},
-					HorizontalWall{3, 2, 4},
-					HorizontalWall{4, 2, 4},
+					VerticalWall{0, 0, 1},
+					VerticalWall{6, 0, 1},
+					VerticalWall{1, 1, 2},
+					HorizontalWall{2, 5, 5},
 				},
 			},
 			Tiles: []Position{
-				{1, 3}, {5, 1},
+				{6, 2}, {5, 3}, {5, 4}, {0, 2}, {0, 3}, {0, 4},
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{1, 0}, {5, 0}, {3, 4},
 		},
+		Steps: 32,
 	},
 }
