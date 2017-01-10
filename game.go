@@ -43,7 +43,9 @@ func (solver DepthFirstSolver) solve(game Game, solutions chan Solution) {
 		}
 		cache[code] = n
 		if state.Match(game.Goal) {
-			solutions <- solution
+			newsolution := make(Solution, len(solution))
+			copy(newsolution, solution)
+			solutions <- newsolution
 			return
 		}
 		f := k.(func(State, Solution, interface{}))
