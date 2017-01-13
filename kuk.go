@@ -153,6 +153,7 @@ var Kuk = []Game{
 					VerticalWall{6, 0, 4},
 					HorizontalWall{1, 2, 6},
 					HorizontalWall{2, 4, 6},
+					HorizontalWall{3, 0, 2},
 				},
 			},
 			Tiles: []Position{
@@ -366,7 +367,7 @@ var Kuk = []Game{
 			},
 		},
 		Goal: []Position{
-			{5, 3}, {1, 1},
+			{1, 0}, {5, 0},
 		},
 		Steps: 20,
 	},
