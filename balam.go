@@ -153,7 +153,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 2}, {1, 0},
 		},
-		Steps: 99,
+		Steps: 23,
 	},
 	// B'ALAM 9
 	Game{
@@ -192,7 +192,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 1}, {3, 4},
 		},
-		Steps: 99,
+		Steps: 20,
 	},
 	// B'ALAM 11
 	Game{
@@ -212,7 +212,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 0}, {2, 3}, {6, 2},
 		},
-		Steps: 99,
+		Steps: 15,
 	},
 	// B'ALAM 12
 	Game{
@@ -227,7 +227,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{5, 4}, {6, 0},
 		},
-		Steps: 99,
+		Steps: 14,
 	},
 	// B'ALAM 13
 	Game{
@@ -245,7 +245,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 1}, {6, 2}, {2, 3},
 		},
-		Steps: 99,
+		Steps: 16,
 	},
 	// B'ALAM 14
 	Game{
@@ -264,7 +264,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{4, 1}, {2, 3}, {4, 3},
 		},
-		Steps: 99,
+		Steps: 12,
 	},
 	// B'ALAM 15
 	Game{
@@ -286,7 +286,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 3}, {1, 1}, {5, 0},
 		},
-		Steps: 99,
+		Steps: 13,
 	},
 	// B'ALAM 16
 	Game{
@@ -306,7 +306,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0},
 		},
-		Steps: 99,
+		Steps: 17,
 	},
 	// B'ALAM 17
 	Game{
@@ -325,7 +325,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{4, 2}, {2, 2},
 		},
-		Steps: 99,
+		Steps: 13,
 	},
 	// B'ALAM 18
 	Game{
@@ -424,7 +424,7 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 3}, {4, 3}, {6, 4},
 		},
-		Steps: 22,
+		Steps: 28,
 	},
 	// B'ALAM 23
 	Game{
@@ -494,7 +494,7 @@ var Balam = []Game{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
-					VerticalWall{5, 0, 2},
+					VerticalWall{5, 0, 1},
 				},
 			},
 			Tiles: []Position{
@@ -562,7 +562,7 @@ var Balam = []Game{
 				},
 			},
 			Tiles: []Position{
-				{3, 2}, {0, 4}, {6, 0}, {4, 2}, {4, 4},
+				{3, 2}, {0, 4}, {6, 0}, {2, 4}, {4, 4},
 			},
 		},
 		Goal: []Position{
