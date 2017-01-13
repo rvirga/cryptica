@@ -249,6 +249,9 @@ var Ajaw = []Game{
 		State: State{
 			Board: Board{
 				W: 7, H: 5,
+				Walls: []Wall{
+					HorizontalWall{4, 6, 6},
+				},
 			},
 			Tiles: []Position{
 				{0, 0}, {0, 1}, {0, 2}, {0, 3}, {0, 4},
@@ -348,7 +351,7 @@ var Ajaw = []Game{
 			},
 		},
 		Goal: []Position{
-			{2, 4}, {4, 4},
+			{4, 4}, {2, 4},
 		},
 		Steps: 12,
 	},
@@ -425,7 +428,7 @@ var Ajaw = []Game{
 			},
 		},
 		Goal: []Position{
-			{1, 4}, {5, 3},
+			{5, 3}, {1, 4},
 		},
 		Steps: 13,
 	},
