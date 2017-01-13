@@ -7,12 +7,10 @@ type Solution []Direction
 func (solution *Solution) String() string {
 	var buffer bytes.Buffer
 	for i, dir := range *solution {
-		switch {
-		case i > 0:
+		if i > 0 {
 			buffer.WriteRune(' ')
-		default:
-			buffer.WriteString(dir.String())
 		}
+		buffer.WriteString(dir.String())
 	}
 	return buffer.String()
 }
