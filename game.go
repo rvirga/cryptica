@@ -24,35 +24,35 @@ type Game struct {
 }
 
 type Solver interface {
-	solve(game Game) (Solution, bool)
+	solve(game Game) Solution
 }
 
 type DepthFirstSolver struct {
 }
 
-func (solver DepthFirstSolver) solve(game Game) (Solution, bool) {
+func (solver DepthFirstSolver) solve(game Game) Solution {
 	cache := make(map[uint64]int)
-	f := func(state State, solution Solution, k interface{}) (Solution, bool) {
+	f := func(state State, solution Solution, k interface{}) Solution {
 		n := len(solution)
 		if n > game.Steps {
-			return nil, false
+			return nil
 		}
 		code := state.Board.Encode(state)
 		if m, exists := cache[code]; exists && m <= n {
-			return nil, false
+			return nil
 		}
 		cache[code] = n
 		if state.Match(game.Goal) {
-			return solution, true
+			return solution
 		}
-		f := k.(func(State, Solution, interface{}) (Solution, bool))
+		f := k.(func(State, Solution, interface{}) Solution)
 		for i := Up; i <= Right; i++ {
 			dir := Direction(i)
-			if result, ok := f(state.Move(dir), append(solution, dir), k); ok {
-				return result, true
+			if result := f(state.Move(dir), append(solution, dir), k); result != nil {
+				return result
 			}
 		}
-		return nil, false
+		return nil
 	}
 	return f(game.State, make(Solution, 0), f)
 }
@@ -60,7 +60,7 @@ func (solver DepthFirstSolver) solve(game Game) (Solution, bool) {
 type BreadthFirstSolver struct {
 }
 
-func (solver BreadthFirstSolver) solve(game Game) (Solution, bool) {
+func (solver BreadthFirstSolver) solve(game Game) Solution {
 	cache := make(map[uint64]Solution)
 	var current, next []uint64
 	{
@@ -74,7 +74,7 @@ func (solver BreadthFirstSolver) solve(game Game) (Solution, bool) {
 			solution := cache[code]
 			state := game.State.Board.Decode(code)
 			if state.Match(game.Goal) {
-				return solution, true
+				return solution
 			}
 			for i := Up; i <= Right; i++ {
 				dir := Direction(i)
@@ -91,5 +91,5 @@ func (solver BreadthFirstSolver) solve(game Game) (Solution, bool) {
 		}
 		current = next
 	}
-	return nil, false
+	return nil
 }
