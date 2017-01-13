@@ -10,7 +10,7 @@ func (pos1 Position) Equal(pos2 Position) bool {
 	return pos1.X == pos2.X && pos1.Y == pos2.Y
 }
 
-func (pos *Position) String() string {
+func (pos Position) String() string {
 	return fmt.Sprintf("(%d,%d)", pos.X, pos.Y)
 }
 

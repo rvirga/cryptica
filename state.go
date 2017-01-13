@@ -76,7 +76,7 @@ func (state State) ItemAt(pos Position) interface{} {
 	return true
 }
 
-func (state *State) String() string {
+func (state State) String() string {
 	var buffer bytes.Buffer
 	for y := 0; y < state.Board.H; y++ {
 		for x := 0; x < state.Board.W; x++ {

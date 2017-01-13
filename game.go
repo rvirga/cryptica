@@ -4,9 +4,9 @@ import "bytes"
 
 type Solution []Direction
 
-func (solution *Solution) String() string {
+func (solution Solution) String() string {
 	var buffer bytes.Buffer
-	for i, dir := range *solution {
+	for i, dir := range solution {
 		if i > 0 {
 			buffer.WriteRune(' ')
 		}
