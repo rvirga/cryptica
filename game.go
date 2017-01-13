@@ -68,7 +68,7 @@ func (solver BreadthFirstSolver) solve(game Game, solutions chan Solution) {
 		cache[code] = make(Solution, 0)
 		current = []uint64{code}
 	}
-	for len(current) > 0 {
+	for depth := 0; depth < game.Steps && len(current) > 0; depth++ {
 		next = make([]uint64, 0)
 		for _, code := range current {
 			solution := cache[code]
