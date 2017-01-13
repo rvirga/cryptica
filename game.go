@@ -24,43 +24,43 @@ type Game struct {
 }
 
 type Solver interface {
-	solve(game Game, solutions chan Solution)
+	solve(game Game) (Solution, bool)
 }
 
 type DepthFirstSolver struct {
 }
 
-func (solver DepthFirstSolver) solve(game Game, solutions chan Solution) {
+func (solver DepthFirstSolver) solve(game Game) (Solution, bool) {
 	cache := make(map[uint64]int)
-	f := func(state State, solution Solution, k interface{}) {
+	f := func(state State, solution Solution, k interface{}) (Solution, bool) {
 		n := len(solution)
 		if n > game.Steps {
-			return
+			return nil, false
 		}
 		code := state.Board.Encode(state)
 		if m, exists := cache[code]; exists && m <= n {
-			return
+			return nil, false
 		}
 		cache[code] = n
 		if state.Match(game.Goal) {
-			newsolution := make(Solution, len(solution))
-			copy(newsolution, solution)
-			solutions <- newsolution
-			return
+			return solution, true
 		}
-		f := k.(func(State, Solution, interface{}))
+		f := k.(func(State, Solution, interface{}) (Solution, bool))
 		for i := Up; i <= Right; i++ {
 			dir := Direction(i)
-			f(state.Move(dir), append(solution, dir), k)
+			if result, ok := f(state.Move(dir), append(solution, dir), k); ok {
+				return result, true
+			}
 		}
+		return nil, false
 	}
-	f(game.State, make(Solution, 0), f)
+	return f(game.State, make(Solution, 0), f)
 }
 
 type BreadthFirstSolver struct {
 }
 
-func (solver BreadthFirstSolver) solve(game Game, solutions chan Solution) {
+func (solver BreadthFirstSolver) solve(game Game) (Solution, bool) {
 	cache := make(map[uint64]Solution)
 	var current, next []uint64
 	{
@@ -74,8 +74,7 @@ func (solver BreadthFirstSolver) solve(game Game, solutions chan Solution) {
 			solution := cache[code]
 			state := game.State.Board.Decode(code)
 			if state.Match(game.Goal) {
-				solutions <- solution
-				continue
+				return solution, true
 			}
 			for i := Up; i <= Right; i++ {
 				dir := Direction(i)
@@ -92,4 +91,5 @@ func (solver BreadthFirstSolver) solve(game Game, solutions chan Solution) {
 		}
 		current = next
 	}
+	return nil, false
 }
