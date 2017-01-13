@@ -236,7 +236,7 @@ var Chan = []Game{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 6, 6},
-					HorizontalWall{1, 0, 5},
+					HorizontalWall{1, 0, 4},
 					VerticalWall{2, 1, 2},
 					VerticalWall{4, 1, 2},
 					HorizontalWall{4, 0, 1},
@@ -245,7 +245,7 @@ var Chan = []Game{
 				},
 			},
 			Tiles: []Position{
-				{0, 0}, {1, 3}, {1, 0}, {0, 3}, {5, 2}, {5, 3}, {5, 4},
+				{0, 0}, {1, 3}, {1, 0}, {0, 3}, {5, 1}, {5, 2}, {5, 3},
 			},
 		},
 		Goal: []Position{
@@ -382,7 +382,7 @@ var Chan = []Game{
 				},
 			},
 			Tiles: []Position{
-				{3, 1}, {2, 4}, {4, 4}, {0, 0}, {4, 2}, {3, 3}, {4, 0},
+				{3, 1}, {2, 4}, {4, 4}, {0, 0}, {4, 2}, {3, 3}, {0, 4},
 			},
 		},
 		Goal: []Position{
