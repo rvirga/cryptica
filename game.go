@@ -22,13 +22,13 @@ type Game struct {
 }
 
 type Solver interface {
-	solve(game Game) Solution
+	Solve(game Game) Solution
 }
 
 type DepthFirstSolver struct {
 }
 
-func (solver DepthFirstSolver) solve(game Game) Solution {
+func (solver DepthFirstSolver) Solve(game Game) Solution {
 	cache := make(map[uint64]int)
 	f := func(state State, solution Solution, k interface{}) Solution {
 		n := len(solution)
@@ -58,7 +58,7 @@ func (solver DepthFirstSolver) solve(game Game) Solution {
 type BreadthFirstSolver struct {
 }
 
-func (solver BreadthFirstSolver) solve(game Game) Solution {
+func (solver BreadthFirstSolver) Solve(game Game) Solution {
 	cache := make(map[uint64]Solution)
 	var current, next []uint64
 	{
