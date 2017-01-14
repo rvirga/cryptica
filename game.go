@@ -90,6 +90,7 @@ func (solver BreadthFirstSolver) Solve(game Game) Solution {
 					next = append(next, newcode)
 				}
 			}
+			cache[code] = nil
 		}
 		depth++
 		current = next
