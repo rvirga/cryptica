@@ -32,20 +32,21 @@ type Board struct {
 
 func (board Board) Encode(state State) (n uint64) {
 	n = 0
+	power, s := uint64(1), uint64(board.W) * uint64(board.H) + 1
 	for _, tile := range state.Tiles {
-		n *= uint64(board.W) * uint64(board.H)
-		n += uint64(tile.Y)*uint64(board.W) + uint64(tile.X)
+		n += (uint64(tile.Y)*uint64(board.W) + uint64(tile.X) + 1) * power
+		power *= s
 	}
 	return n
 }
 
 func (board Board) Decode(n uint64) (state State) {
-	s := uint64(board.W) * uint64(board.H)
+	s := uint64(board.W) * uint64(board.H) + 1
 	state = State{board, make([]Position, 0)}
 	for n > 0 {
-		m := n % s
+		m := n % s - 1
 		x, y := int(m%uint64(board.W)), int(m/uint64(board.W))
-		state.Tiles = append([]Position{{x, y}}, state.Tiles...)
+		state.Tiles = append(state.Tiles, Position{x, y})
 		n /= s
 	}
 	return state
