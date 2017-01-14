@@ -1,9 +1,9 @@
 package cryptica
 
 var Kuk = []Game{
-	// K'UK 1
 	Game{
-		State: State{
+		Name: "K'UK 1",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -18,11 +18,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{2, 0}, {6, 4},
 		},
-		Steps: 17,
+		MinSteps: 17,
 	},
-	// K'UK 2
 	Game{
-		State: State{
+		Name: "K'UK 2",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -39,11 +39,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{6, 0}, {0, 0}, {4, 1}, {4, 3},
 		},
-		Steps: 19,
+		MinSteps: 19,
 	},
-	// K'UK 3
 	Game{
-		State: State{
+		Name: "K'UK 3",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -61,11 +61,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{2, 3}, {3, 3}, {5, 4},
 		},
-		Steps: 29,
+		MinSteps: 29,
 	},
-	// K'UK 4
 	Game{
-		State: State{
+		Name: "K'UK 4",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -81,11 +81,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0},
 		},
-		Steps: 17,
+		MinSteps: 17,
 	},
-	// K'UK 5
 	Game{
-		State: State{
+		Name: "K'UK 5",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -99,11 +99,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 4}, {3, 0},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// K'UK 6
 	Game{
-		State: State{
+		Name: "K'UK 6",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -118,11 +118,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{4, 1}, {6, 1}, {0, 4},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// K'UK 7
 	Game{
-		State: State{
+		Name: "K'UK 7",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -140,11 +140,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{6, 3}, {0, 0},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// K'UK 8
 	Game{
-		State: State{
+		Name: "K'UK 8",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -163,11 +163,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{3, 0},
 		},
-		Steps: 25,
+		MinSteps: 25,
 	},
-	// K'UK 9
 	Game{
-		State: State{
+		Name: "K'UK 9",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -188,11 +188,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 3}, {6, 2}, {1, 0},
 		},
-		Steps: 10,
+		MinSteps: 10,
 	},
-	// K'UK 10
 	Game{
-		State: State{
+		Name: "K'UK 10",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -208,11 +208,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{3, 3}, {3, 1},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// K'UK 11
 	Game{
-		State: State{
+		Name: "K'UK 11",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -231,11 +231,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{1, 4}, {5, 4}, {1, 0}, {5, 0},
 		},
-		Steps: 21,
+		MinSteps: 21,
 	},
-	// K'UK 12
 	Game{
-		State: State{
+		Name: "K'UK 12",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -249,11 +249,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0}, {6, 4},
 		},
-		Steps: 23,
+		MinSteps: 23,
 	},
-	// K'UK 13
 	Game{
-		State: State{
+		Name: "K'UK 13",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -271,11 +271,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 2}, {5, 2},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// K'UK 14
 	Game{
-		State: State{
+		Name: "K'UK 14",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -290,11 +290,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{3, 0}, {5, 2}, {3, 4}, {1, 2},
 		},
-		Steps: 15,
+		MinSteps: 15,
 	},
-	// K'UK 15
 	Game{
-		State: State{
+		Name: "K'UK 15",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -312,11 +312,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{2, 1}, {5, 4},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// K'UK 16
 	Game{
-		State: State{
+		Name: "K'UK 16",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -331,11 +331,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 3}, {0, 2}, {0, 1},
 		},
-		Steps: 18,
+		MinSteps: 18,
 	},
-	// K'UK 17
 	Game{
-		State: State{
+		Name: "K'UK 17",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -350,11 +350,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{2, 4}, {3, 0}, {4, 4},
 		},
-		Steps: 19,
+		MinSteps: 19,
 	},
-	// K'UK 18
 	Game{
-		State: State{
+		Name: "K'UK 18",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -369,11 +369,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{1, 0}, {5, 0},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// K'UK 19
 	Game{
-		State: State{
+		Name: "K'UK 19",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -388,11 +388,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 1}, {6, 2},
 		},
-		Steps: 19,
+		MinSteps: 19,
 	},
-	// K'UK 20
 	Game{
-		State: State{
+		Name: "K'UK 20",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -409,11 +409,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 0}, {6, 4},
 		},
-		Steps: 22,
+		MinSteps: 22,
 	},
-	// K'UK 21
 	Game{
-		State: State{
+		Name: "K'UK 21",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -433,11 +433,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{4, 2}, {2, 2},
 		},
-		Steps: 21,
+		MinSteps: 21,
 	},
-	// K'UK 22
 	Game{
-		State: State{
+		Name: "K'UK 22",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -452,11 +452,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{6, 0}, {5, 2}, {0, 3}, {0, 1},
 		},
-		Steps: 14,
+		MinSteps: 14,
 	},
-	// K'UK 23
 	Game{
-		State: State{
+		Name: "K'UK 23",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -470,11 +470,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 0}, {2, 3}, {6, 2},
 		},
-		Steps: 18,
+		MinSteps: 18,
 	},
-	// K'UK 24
 	Game{
-		State: State{
+		Name: "K'UK 24",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -488,11 +488,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 4}, {3, 4}, {6, 4},
 		},
-		Steps: 22,
+		MinSteps: 22,
 	},
-	// K'UK 25
 	Game{
-		State: State{
+		Name: "K'UK 25",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -511,11 +511,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0},
 		},
-		Steps: 17,
+		MinSteps: 17,
 	},
-	// K'UK 26
 	Game{
-		State: State{
+		Name: "K'UK 26",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -530,11 +530,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0},
 		},
-		Steps: 15,
+		MinSteps: 15,
 	},
-	// K'UK 27
 	Game{
-		State: State{
+		Name: "K'UK 27",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -548,11 +548,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 4}, {2, 0}, {6, 4},
 		},
-		Steps: 18,
+		MinSteps: 18,
 	},
-	// K'UK 28
 	Game{
-		State: State{
+		Name: "K'UK 28",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -570,11 +570,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0},
 		},
-		Steps: 17,
+		MinSteps: 17,
 	},
-	// K'UK 29
 	Game{
-		State: State{
+		Name: "K'UK 29",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -589,11 +589,11 @@ var Kuk = []Game{
 		Goal: []Position{
 			{1, 4}, {5, 4}, {3, 1},
 		},
-		Steps: 27,
+		MinSteps: 27,
 	},
-	// K'UK 30
 	Game{
-		State: State{
+		Name: "K'UK 30",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -609,6 +609,6 @@ var Kuk = []Game{
 		Goal: []Position{
 			{2, 3}, {4, 3}, {3, 1},
 		},
-		Steps: 25,
+		MinSteps: 25,
 	},
 }

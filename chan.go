@@ -1,9 +1,9 @@
 package cryptica
 
 var Chan = []Game{
-	// CHAN 1
 	Game{
-		State: State{
+		Name: "CHAN 1",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -20,11 +20,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// CHAN 2
 	Game{
-		State: State{
+		Name: "CHAN 2",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -38,11 +38,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{0, 3}, {0, 2}, {0, 1}, {0, 0},
 		},
-		Steps: 29,
+		MinSteps: 29,
 	},
-	// CHAN 3
 	Game{
-		State: State{
+		Name: "CHAN 3",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -57,11 +57,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{1, 4}, {3, 2}, {5, 0},
 		},
-		Steps: 27,
+		MinSteps: 27,
 	},
-	// CHAN 4
 	Game{
-		State: State{
+		Name: "CHAN 4",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -78,11 +78,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{5, 4}, {1, 0},
 		},
-		Steps: 15,
+		MinSteps: 15,
 	},
-	// CHAN 5
 	Game{
-		State: State{
+		Name: "CHAN 5",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -101,11 +101,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{1, 4}, {5, 2}, {3, 0},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// CHAN 6
 	Game{
-		State: State{
+		Name: "CHAN 6",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -120,11 +120,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{0, 0}, {6, 0}, {3, 4},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// CHAN 7
 	Game{
-		State: State{
+		Name: "CHAN 7",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -140,11 +140,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{2, 1}, {6, 0}, {0, 4},
 		},
-		Steps: 30,
+		MinSteps: 30,
 	},
-	// CHAN 8
 	Game{
-		State: State{
+		Name: "CHAN 8",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -161,11 +161,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{0, 2}, {6, 2},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// CHAN 9
 	Game{
-		State: State{
+		Name: "CHAN 9",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -181,11 +181,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{1, 4}, {1, 0}, {5, 0}, {5, 4},
 		},
-		Steps: 24,
+		MinSteps: 24,
 	},
-	// CHAN 10
 	Game{
-		State: State{
+		Name: "CHAN 10",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -203,11 +203,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{3, 0}, {6, 2}, {0, 1},
 		},
-		Steps: 15,
+		MinSteps: 15,
 	},
-	// CHAN 11
 	Game{
-		State: State{
+		Name: "CHAN 11",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -227,11 +227,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{5, 4}, {1, 4},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// CHAN 12
 	Game{
-		State: State{
+		Name: "CHAN 12",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -251,11 +251,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{6, 2}, {0, 2}, {5, 0}, {2, 4},
 		},
-		Steps: 22,
+		MinSteps: 22,
 	},
-	// CHAN 13
 	Game{
-		State: State{
+		Name: "CHAN 13",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -274,11 +274,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{2, 3}, {4, 3}, {1, 1}, {5, 1},
 		},
-		Steps: 19,
+		MinSteps: 19,
 	},
-	// CHAN 14
 	Game{
-		State: State{
+		Name: "CHAN 14",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -297,11 +297,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{4, 4}, {5, 0}, {1, 0}, {2, 4},
 		},
-		Steps: 26,
+		MinSteps: 26,
 	},
-	// CHAN 15
 	Game{
-		State: State{
+		Name: "CHAN 15",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -320,11 +320,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{2, 1}, {0, 4}, {5, 1}, {4, 3},
 		},
-		Steps: 17,
+		MinSteps: 17,
 	},
-	// CHAN 16
 	Game{
-		State: State{
+		Name: "CHAN 16",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -342,11 +342,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{0, 4}, {5, 4}, {6, 0},
 		},
-		Steps: 23,
+		MinSteps: 23,
 	},
-	// CHAN 17
 	Game{
-		State: State{
+		Name: "CHAN 17",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -363,11 +363,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{0, 4}, {3, 1}, {6, 0}, {1, 0},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// CHAN 18
 	Game{
-		State: State{
+		Name: "CHAN 18",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -388,11 +388,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{3, 2}, {2, 0}, {4, 0},
 		},
-		Steps: 25,
+		MinSteps: 25,
 	},
-	// CHAN 19
 	Game{
-		State: State{
+		Name: "CHAN 19",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -412,11 +412,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{2, 1}, {3, 3}, {0, 2}, {5, 3},
 		},
-		Steps: 11,
+		MinSteps: 11,
 	},
-	// CHAN 20
 	Game{
-		State: State{
+		Name: "CHAN 20",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -436,11 +436,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{0, 2}, {6, 2}, {3, 4}, {2, 0},
 		},
-		Steps: 14,
+		MinSteps: 14,
 	},
-	// CHAN 21
 	Game{
-		State: State{
+		Name: "CHAN 21",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -459,11 +459,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{1, 0}, {5, 4},
 		},
-		Steps: 16,
+		MinSteps: 16,
 	},
-	// CHAN 22
 	Game{
-		State: State{
+		Name: "CHAN 22",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -481,11 +481,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{6, 0}, {5, 1}, {6, 4}, {0, 4},
 		},
-		Steps: 18,
+		MinSteps: 18,
 	},
-	// CHAN 23
 	Game{
-		State: State{
+		Name: "CHAN 23",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -503,11 +503,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{6, 2}, {0, 0}, {3, 4},
 		},
-		Steps: 16,
+		MinSteps: 16,
 	},
-	// CHAN 24
 	Game{
-		State: State{
+		Name: "CHAN 24",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -522,11 +522,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{6, 0}, {1, 4},
 		},
-		Steps: 26,
+		MinSteps: 26,
 	},
-	// CHAN 25
 	Game{
-		State: State{
+		Name: "CHAN 25",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -544,11 +544,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{0, 2}, {6, 2},
 		},
-		Steps: 18,
+		MinSteps: 18,
 	},
-	// CHAN 26
 	Game{
-		State: State{
+		Name: "CHAN 26",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -567,11 +567,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{1, 2}, {5, 2}, {1, 4},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// CHAN 27
 	Game{
-		State: State{
+		Name: "CHAN 27",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -590,11 +590,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{2, 2}, {3, 3},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// CHAN 28
 	Game{
-		State: State{
+		Name: "CHAN 28",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -615,11 +615,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{0, 1}, {6, 0}, {2, 3}, {5, 4},
 		},
-		Steps: 10,
+		MinSteps: 10,
 	},
-	// CHAN 29
 	Game{
-		State: State{
+		Name: "CHAN 29",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -638,11 +638,11 @@ var Chan = []Game{
 		Goal: []Position{
 			{1, 2}, {5, 2},
 		},
-		Steps: 14,
+		MinSteps: 14,
 	},
-	// CHAN 30
 	Game{
-		State: State{
+		Name: "CHAN 30",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -659,6 +659,6 @@ var Chan = []Game{
 		Goal: []Position{
 			{1, 0}, {5, 0}, {3, 4},
 		},
-		Steps: 32,
+		MinSteps: 32,
 	},
 }

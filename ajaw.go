@@ -1,9 +1,9 @@
 package cryptica
 
 var Ajaw = []Game{
-	// AJAW 1
 	Game{
-		State: State{
+		Name: "AJAW 1",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 			},
@@ -14,11 +14,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{6, 0}, {5, 0},
 		},
-		Steps: 7,
+		MinSteps: 7,
 	},
-	// AJAW 2
 	Game{
-		State: State{
+		Name: "AJAW 2",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -33,11 +33,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{5, 0}, {6, 4},
 		},
-		Steps: 10,
+		MinSteps: 10,
 	},
-	// AJAW 3
 	Game{
-		State: State{
+		Name: "AJAW 3",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -52,11 +52,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{0, 2},
 		},
-		Steps: 6,
+		MinSteps: 6,
 	},
-	// AJAW 4
 	Game{
-		State: State{
+		Name: "AJAW 4",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -71,11 +71,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{0, 0}, {4, 4},
 		},
-		Steps: 8,
+		MinSteps: 8,
 	},
-	// AJAW 5
 	Game{
-		State: State{
+		Name: "AJAW 5",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -90,11 +90,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{6, 1}, {0, 4},
 		},
-		Steps: 12,
+		MinSteps: 12,
 	},
-	// AJAW 6
 	Game{
-		State: State{
+		Name: "AJAW 6",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -111,11 +111,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{1, 1}, {5, 3},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// AJAW 7
 	Game{
-		State: State{
+		Name: "AJAW 7",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 			},
@@ -126,11 +126,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{6, 4},
 		},
-		Steps: 21,
+		MinSteps: 21,
 	},
-	// AJAW 8
 	Game{
-		State: State{
+		Name: "AJAW 8",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -144,11 +144,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 4},
 		},
-		Steps: 11,
+		MinSteps: 11,
 	},
-	// AJAW 9
 	Game{
-		State: State{
+		Name: "AJAW 9",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -162,11 +162,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{3, 4}, {3, 0},
 		},
-		Steps: 17,
+		MinSteps: 17,
 	},
-	// AJAW 10
 	Game{
-		State: State{
+		Name: "AJAW 10",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -181,11 +181,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{0, 0}, {6, 4},
 		},
-		Steps: 15,
+		MinSteps: 15,
 	},
-	// AJAW 11
 	Game{
-		State: State{
+		Name: "AJAW 11",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -200,11 +200,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{0, 1}, {6, 3},
 		},
-		Steps: 10,
+		MinSteps: 10,
 	},
-	// AJAW 12
 	Game{
-		State: State{
+		Name: "AJAW 12",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -220,11 +220,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{3, 2}, {3, 4},
 		},
-		Steps: 12,
+		MinSteps: 12,
 	},
-	// AJAW 13
 	Game{
-		State: State{
+		Name: "AJAW 13",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -242,11 +242,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{1, 4},
 		},
-		Steps: 16,
+		MinSteps: 16,
 	},
-	// AJAW 14
 	Game{
-		State: State{
+		Name: "AJAW 14",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -260,11 +260,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{3, 4},
 		},
-		Steps: 21,
+		MinSteps: 21,
 	},
-	// AJAW 15
 	Game{
-		State: State{
+		Name: "AJAW 15",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -280,11 +280,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{3, 0}, {3, 4},
 		},
-		Steps: 16,
+		MinSteps: 16,
 	},
-	// AJAW 16
 	Game{
-		State: State{
+		Name: "AJAW 16",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -299,11 +299,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 4},
 		},
-		Steps: 10,
+		MinSteps: 10,
 	},
-	// AJAW 17
 	Game{
-		State: State{
+		Name: "AJAW 17",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -317,11 +317,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{0, 0},
 		},
-		Steps: 22,
+		MinSteps: 22,
 	},
-	// AJAW 18
 	Game{
-		State: State{
+		Name: "AJAW 18",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -335,11 +335,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{1, 3}, {1, 1},
 		},
-		Steps: 12,
+		MinSteps: 12,
 	},
-	// AJAW 19
 	Game{
-		State: State{
+		Name: "AJAW 19",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -353,11 +353,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{4, 4}, {2, 4},
 		},
-		Steps: 12,
+		MinSteps: 12,
 	},
-	// AJAW 20
 	Game{
-		State: State{
+		Name: "AJAW 20",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -371,11 +371,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{1, 3}, {5, 1},
 		},
-		Steps: 10,
+		MinSteps: 10,
 	},
-	// AJAW 21
 	Game{
-		State: State{
+		Name: "AJAW 21",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -390,11 +390,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{1, 1}, {6, 4},
 		},
-		Steps: 11,
+		MinSteps: 11,
 	},
-	// AJAW 22
 	Game{
-		State: State{
+		Name: "AJAW 22",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -409,11 +409,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{1, 0}, {3, 4},
 		},
-		Steps: 10,
+		MinSteps: 10,
 	},
-	// AJAW 23
 	Game{
-		State: State{
+		Name: "AJAW 23",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -430,11 +430,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{5, 3}, {1, 4},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// AJAW 24
 	Game{
-		State: State{
+		Name: "AJAW 24",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -451,11 +451,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{6, 4}, {0, 0},
 		},
-		Steps: 22,
+		MinSteps: 22,
 	},
-	// AJAW 25
 	Game{
-		State: State{
+		Name: "AJAW 25",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -470,11 +470,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{3, 4}, {6, 0},
 		},
-		Steps: 9,
+		MinSteps: 9,
 	},
-	// AJAW 26
 	Game{
-		State: State{
+		Name: "AJAW 26",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -494,11 +494,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{3, 3}, {2, 2},
 		},
-		Steps: 14,
+		MinSteps: 14,
 	},
-	// AJAW 27
 	Game{
-		State: State{
+		Name: "AJAW 27",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -515,11 +515,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{6, 4}, {4, 3}, {0, 4},
 		},
-		Steps: 16,
+		MinSteps: 16,
 	},
-	// AJAW 28
 	Game{
-		State: State{
+		Name: "AJAW 28",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -534,11 +534,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{6, 3}, {0, 0},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// AJAW 29
 	Game{
-		State: State{
+		Name: "AJAW 29",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -557,11 +557,11 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{6, 1}, {1, 4},
 		},
-		Steps: 7,
+		MinSteps: 7,
 	},
-	// AJAW 30
 	Game{
-		State: State{
+		Name: "AJAW 30",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -578,6 +578,6 @@ var Ajaw = []Game{
 		Goal: []Position{
 			{5, 0}, {5, 4}, {0, 2},
 		},
-		Steps: 14,
+		MinSteps: 14,
 	},
 }

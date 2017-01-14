@@ -1,9 +1,9 @@
 package cryptica
 
 var Balam = []Game{
-	// B'ALAM 1
 	Game{
-		State: State{
+		Name: "B'ALAM 1",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -19,11 +19,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 3}, {3, 1},
 		},
-		Steps: 17,
+		MinSteps: 17,
 	},
-	// B'ALAM 2
 	Game{
-		State: State{
+		Name: "B'ALAM 2",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -37,11 +37,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 3}, {6, 1},
 		},
-		Steps: 16,
+		MinSteps: 16,
 	},
-	// B'ALAM 3
 	Game{
-		State: State{
+		Name: "B'ALAM 3",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -59,11 +59,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 4}, {0, 0}, {6, 3},
 		},
-		Steps: 9,
+		MinSteps: 9,
 	},
-	// B'ALAM 4
 	Game{
-		State: State{
+		Name: "B'ALAM 4",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -79,11 +79,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{5, 0}, {0, 4},
 		},
-		Steps: 12,
+		MinSteps: 12,
 	},
-	// B'ALAM 5
 	Game{
-		State: State{
+		Name: "B'ALAM 5",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -100,11 +100,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 1}, {3, 3},
 		},
-		Steps: 19,
+		MinSteps: 19,
 	},
-	// B'ALAM 6
 	Game{
-		State: State{
+		Name: "B'ALAM 6",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -120,11 +120,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 2}, {6, 4},
 		},
-		Steps: 24,
+		MinSteps: 24,
 	},
-	// B'ALAM 7
 	Game{
-		State: State{
+		Name: "B'ALAM 7",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 			},
@@ -135,11 +135,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{2, 2}, {1, 1}, {1, 2},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// B'ALAM 8
 	Game{
-		State: State{
+		Name: "B'ALAM 8",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -153,11 +153,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 2}, {1, 0},
 		},
-		Steps: 23,
+		MinSteps: 23,
 	},
-	// B'ALAM 9
 	Game{
-		State: State{
+		Name: "B'ALAM 9",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -174,11 +174,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 1}, {4, 4},
 		},
-		Steps: 27,
+		MinSteps: 27,
 	},
-	// B'ALAM 10
 	Game{
-		State: State{
+		Name: "B'ALAM 10",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -192,11 +192,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 1}, {3, 4},
 		},
-		Steps: 20,
+		MinSteps: 20,
 	},
-	// B'ALAM 11
 	Game{
-		State: State{
+		Name: "B'ALAM 11",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -212,11 +212,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 0}, {2, 3}, {6, 2},
 		},
-		Steps: 15,
+		MinSteps: 15,
 	},
-	// B'ALAM 12
 	Game{
-		State: State{
+		Name: "B'ALAM 12",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 			},
@@ -227,11 +227,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{5, 4}, {6, 0},
 		},
-		Steps: 14,
+		MinSteps: 14,
 	},
-	// B'ALAM 13
 	Game{
-		State: State{
+		Name: "B'ALAM 13",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -245,11 +245,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 1}, {6, 2}, {2, 3},
 		},
-		Steps: 16,
+		MinSteps: 16,
 	},
-	// B'ALAM 14
 	Game{
-		State: State{
+		Name: "B'ALAM 14",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -264,11 +264,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{4, 1}, {2, 3}, {4, 3},
 		},
-		Steps: 12,
+		MinSteps: 12,
 	},
-	// B'ALAM 15
 	Game{
-		State: State{
+		Name: "B'ALAM 15",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -286,11 +286,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 3}, {1, 1}, {5, 0},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// B'ALAM 16
 	Game{
-		State: State{
+		Name: "B'ALAM 16",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -306,11 +306,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0},
 		},
-		Steps: 17,
+		MinSteps: 17,
 	},
-	// B'ALAM 17
 	Game{
-		State: State{
+		Name: "B'ALAM 17",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -325,11 +325,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{4, 2}, {2, 2},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// B'ALAM 18
 	Game{
-		State: State{
+		Name: "B'ALAM 18",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -345,11 +345,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 2},
 		},
-		Steps: 19,
+		MinSteps: 19,
 	},
-	// B'ALAM 19
 	Game{
-		State: State{
+		Name: "B'ALAM 19",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -363,11 +363,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{6, 1}, {6, 2}, {6, 3},
 		},
-		Steps: 17,
+		MinSteps: 17,
 	},
-	// B'ALAM 20
 	Game{
-		State: State{
+		Name: "B'ALAM 20",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -385,11 +385,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{4, 2}, {2, 2},
 		},
-		Steps: 11,
+		MinSteps: 11,
 	},
-	// B'ALAM 21
 	Game{
-		State: State{
+		Name: "B'ALAM 21",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -404,11 +404,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{5, 1}, {2, 4}, {1, 0},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// B'ALAM 22
 	Game{
-		State: State{
+		Name: "B'ALAM 22",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -424,11 +424,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 3}, {4, 3}, {6, 4},
 		},
-		Steps: 28,
+		MinSteps: 28,
 	},
-	// B'ALAM 23
 	Game{
-		State: State{
+		Name: "B'ALAM 23",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -444,11 +444,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{2, 3}, {5, 2}, {0, 0},
 		},
-		Steps: 11,
+		MinSteps: 11,
 	},
-	// B'ALAM 24
 	Game{
-		State: State{
+		Name: "B'ALAM 24",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -465,11 +465,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{6, 4}, {0, 0},
 		},
-		Steps: 29,
+		MinSteps: 29,
 	},
-	// B'ALAM 25
 	Game{
-		State: State{
+		Name: "B'ALAM 25",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -486,11 +486,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 3}, {2, 2}, {3, 1},
 		},
-		Steps: 18,
+		MinSteps: 18,
 	},
-	// B'ALAM 26
 	Game{
-		State: State{
+		Name: "B'ALAM 26",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -504,11 +504,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0},
 		},
-		Steps: 16,
+		MinSteps: 16,
 	},
-	// B'ALAM 27
 	Game{
-		State: State{
+		Name: "B'ALAM 27",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -523,11 +523,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{0, 4}, {6, 0},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
-	// B'ALAM 28
 	Game{
-		State: State{
+		Name: "B'ALAM 28",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -547,11 +547,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 3}, {3, 1}, {5, 2}, {1, 2},
 		},
-		Steps: 9,
+		MinSteps: 9,
 	},
-	// B'ALAM 29
 	Game{
-		State: State{
+		Name: "B'ALAM 29",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -568,11 +568,11 @@ var Balam = []Game{
 		Goal: []Position{
 			{3, 1}, {0, 0}, {6, 4},
 		},
-		Steps: 15,
+		MinSteps: 15,
 	},
-	// B'ALAM 30
 	Game{
-		State: State{
+		Name: "B'ALAM 30",
+		Start: State{
 			Board: Board{
 				W: 7, H: 5,
 				Walls: []Wall{
@@ -589,6 +589,6 @@ var Balam = []Game{
 		Goal: []Position{
 			{1, 3}, {5, 1},
 		},
-		Steps: 13,
+		MinSteps: 13,
 	},
 }

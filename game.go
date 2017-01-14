@@ -16,9 +16,10 @@ func (solution Solution) String() string {
 }
 
 type Game struct {
-	State State
+	Name string
+	Start State
 	Goal  Goal
-	Steps int
+	MinSteps int
 }
 
 type Solver interface {
@@ -32,7 +33,7 @@ func (solver DepthFirstSolver) Solve(game Game) Solution {
 	cache := make(map[uint64]int)
 	f := func(state State, solution Solution, k interface{}) Solution {
 		n := len(solution)
-		if n > game.Steps {
+		if n > game.MinSteps {
 			return nil
 		}
 		code := state.Board.Encode(state)
@@ -52,7 +53,7 @@ func (solver DepthFirstSolver) Solve(game Game) Solution {
 		}
 		return nil
 	}
-	return f(game.State, make(Solution, 0), f)
+	return f(game.Start, make(Solution, 0), f)
 }
 
 type BreadthFirstSolver struct {
@@ -62,7 +63,7 @@ func (solver BreadthFirstSolver) Solve(game Game) Solution {
 	cache := make(map[uint64]Solution)
 	var current, next []uint64
 	{
-		code := game.State.Board.Encode(game.State)
+		code := game.Start.Board.Encode(game.Start)
 		cache[code] = make(Solution, 0)
 		current = []uint64{code}
 	}
@@ -71,17 +72,17 @@ func (solver BreadthFirstSolver) Solve(game Game) Solution {
 		next = make([]uint64, 0)
 		for _, code := range current {
 			solution := cache[code]
-			state := game.State.Board.Decode(code)
+			state := game.Start.Board.Decode(code)
 			if state.Match(game.Goal) {
 				return solution
 			}
-			if depth >= game.Steps {
+			if depth >= game.MinSteps {
 				continue
 			}
 			for i := Up; i <= Right; i++ {
 				dir := Direction(i)
 				newstate := state.Move(dir)
-				newcode := game.State.Board.Encode(newstate)
+				newcode := game.Start.Board.Encode(newstate)
 				if _, exists := cache[newcode]; !exists {
 					newsolution := make(Solution, len(solution))
 					copy(newsolution, solution)
