@@ -1,8 +1,12 @@
+// Copyright 2017 Roberto Virga. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 package cryptica
 
 import (
-	"testing"
 	"sync"
+	"testing"
 )
 
 func partest(t *testing.T, solver Solver, set []Game) {
@@ -68,4 +72,3 @@ func TestKukBreadthFirst(t *testing.T) {
 	// test sequentially to save memory
 	seqtest(t, new(BreadthFirstSolver), Kuk)
 }
-

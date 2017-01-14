@@ -1,3 +1,7 @@
+// Copyright 2017 Roberto Virga. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 package cryptica
 
 import "bytes"
@@ -16,9 +20,9 @@ func (solution Solution) String() string {
 }
 
 type Game struct {
-	Name string
-	Start State
-	Goal  Goal
+	Name     string
+	Start    State
+	Goal     Goal
 	MinSteps int
 }
 
