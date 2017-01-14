@@ -66,13 +66,17 @@ func (solver BreadthFirstSolver) Solve(game Game) Solution {
 		cache[code] = make(Solution, 0)
 		current = []uint64{code}
 	}
-	for depth := 0; depth < game.Steps && len(current) > 0; depth++ {
+	depth := 0
+	for len(current) > 0 {
 		next = make([]uint64, 0)
 		for _, code := range current {
 			solution := cache[code]
 			state := game.State.Board.Decode(code)
 			if state.Match(game.Goal) {
 				return solution
+			}
+			if depth >= game.Steps {
+				continue
 			}
 			for i := Up; i <= Right; i++ {
 				dir := Direction(i)
@@ -87,6 +91,7 @@ func (solver BreadthFirstSolver) Solve(game Game) Solution {
 				}
 			}
 		}
+		depth++
 		current = next
 	}
 	return nil
