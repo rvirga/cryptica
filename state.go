@@ -44,7 +44,7 @@ func (board Board) Encode(state State) (n uint64) {
 	return
 }
 
-func (board Board) Decode(n uint64) (state State) {
+func (board *Board) Decode(n uint64) (state State) {
 	s := uint64(board.W)*uint64(board.H) + 1
 	state = State{board, make([]Position, 0)}
 	for n > 0 {
@@ -57,7 +57,7 @@ func (board Board) Decode(n uint64) (state State) {
 }
 
 type State struct {
-	Board Board
+	Board *Board
 	Tiles []Position
 }
 
@@ -108,8 +108,11 @@ func (state State) move(pos Position, dir Direction) (Position, bool) {
 	}
 	item := state.ItemAt(newpos)
 	if tile, ok := item.(int); ok {
-		_, ok := state.move(state.Tiles[tile], dir)
-		return newpos, ok
+		if _, changed := state.move(state.Tiles[tile], dir); changed {
+			return newpos, true
+		} else {
+			return pos, false
+		}
 	} else if empty := item.(bool); empty {
 		return newpos, true
 	} else {
@@ -117,15 +120,15 @@ func (state State) move(pos Position, dir Direction) (Position, bool) {
 	}
 }
 
-func (state State) Move(dir Direction) State {
+func (state State) Move(dir Direction) (State, bool) {
+	changed := false
 	tiles := make([]Position, len(state.Tiles))
-	copy(tiles, state.Tiles)
 	for tile, pos := range state.Tiles {
-		if newpos, ok := state.move(pos, dir); ok {
-			tiles[tile] = newpos
-		}
+		newpos, poschanged := state.move(pos, dir)
+		changed = changed || poschanged
+		tiles[tile] = newpos
 	}
-	return State{state.Board, tiles}
+	return State{state.Board, tiles}, changed
 }
 
 type Goal []Position

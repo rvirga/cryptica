@@ -8,7 +8,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 1",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{2, 0, 2},
@@ -29,7 +29,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 2",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{4, 0, 0},
@@ -47,7 +47,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 3",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{4, 3, 3},
@@ -66,7 +66,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 4",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 3, 3},
@@ -87,7 +87,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 5",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{0, 0, 3},
@@ -110,7 +110,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 6",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 1, 4},
@@ -129,7 +129,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 7",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{0, 0, 2},
@@ -149,7 +149,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 8",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 3, 6},
@@ -170,7 +170,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 9",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{0, 2, 3},
@@ -190,7 +190,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 10",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 0, 2},
@@ -212,7 +212,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 11",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 0, 6},
@@ -236,7 +236,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 12",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 6, 6},
@@ -260,7 +260,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 13",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{2, 1, 5},
@@ -283,7 +283,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 14",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{1, 2, 2},
@@ -306,7 +306,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 15",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 1, 1},
@@ -329,7 +329,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 16",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 4, 4},
@@ -351,7 +351,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 17",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 3, 3},
@@ -372,7 +372,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 18",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 3, 3},
@@ -397,7 +397,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 19",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 0, 6},
@@ -421,7 +421,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 20",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 1, 1},
@@ -445,7 +445,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 21",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 4, 6},
@@ -468,7 +468,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 22",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 1, 1},
@@ -490,7 +490,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 23",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 3, 3},
@@ -512,7 +512,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 24",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 1, 2},
@@ -531,7 +531,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 25",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{1, 3, 3},
@@ -553,7 +553,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 26",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 6, 6},
@@ -576,7 +576,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 27",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 0, 0},
@@ -599,7 +599,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 28",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{3, 0, 1},
@@ -624,7 +624,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 29",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 1, 2},
@@ -647,7 +647,7 @@ var Chan = []Game{
 	Game{
 		Name: "CHAN 30",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{0, 0, 1},

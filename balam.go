@@ -8,7 +8,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 1",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 0, 1},
@@ -28,7 +28,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 2",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{3, 3, 3},
@@ -46,7 +46,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 3",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 5, 5},
@@ -68,7 +68,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 4",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{2, 0, 0},
@@ -88,7 +88,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 5",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 0, 6},
@@ -109,7 +109,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 6",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 1, 2},
@@ -129,7 +129,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 7",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 			},
 			Tiles: []Position{
@@ -144,7 +144,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 8",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 6, 6},
@@ -162,7 +162,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 9",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 0, 1},
@@ -183,7 +183,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 10",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 0, 0},
@@ -201,7 +201,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 11",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{1, 1, 4},
@@ -221,7 +221,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 12",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 			},
 			Tiles: []Position{
@@ -236,7 +236,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 13",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{2, 5, 5},
@@ -254,7 +254,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 14",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{2, 2, 4},
@@ -273,7 +273,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 15",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{1, 0, 0},
@@ -295,7 +295,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 16",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{1, 0, 4},
@@ -315,7 +315,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 17",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 1, 3},
@@ -334,7 +334,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 18",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{3, 1, 4},
@@ -354,7 +354,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 19",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{3, 0, 1},
@@ -372,7 +372,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 20",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{0, 0, 4},
@@ -394,7 +394,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 21",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{1, 4, 4},
@@ -413,7 +413,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 22",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{2, 1, 5},
@@ -433,7 +433,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 23",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{1, 1, 5},
@@ -453,7 +453,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 24",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{0, 2, 4},
@@ -474,7 +474,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 25",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{1, 2, 2},
@@ -495,7 +495,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 26",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					VerticalWall{5, 0, 1},
@@ -513,7 +513,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 27",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 0, 4},
@@ -532,7 +532,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 28",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{1, 0, 2},
@@ -556,7 +556,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 29",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{0, 2, 5},
@@ -577,7 +577,7 @@ var Balam = []Game{
 	Game{
 		Name: "B'ALAM 30",
 		Start: State{
-			Board: Board{
+			Board: &Board{
 				W: 7, H: 5,
 				Walls: []Wall{
 					HorizontalWall{2, 1, 2},

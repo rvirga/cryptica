@@ -51,8 +51,10 @@ func (solver DepthFirstSolver) Solve(game Game) Solution {
 		f := k.(func(State, Solution, interface{}) Solution)
 		for i := Up; i <= Right; i++ {
 			dir := Direction(i)
-			if result := f(state.Move(dir), append(solution, dir), k); result != nil {
-				return result
+			if newstate, changed := state.Move(dir); changed {
+				if result := f(newstate, append(solution, dir), k); result != nil {
+					return result
+				}
 			}
 		}
 		return nil
@@ -85,14 +87,15 @@ func (solver BreadthFirstSolver) Solve(game Game) Solution {
 			}
 			for i := Up; i <= Right; i++ {
 				dir := Direction(i)
-				newstate := state.Move(dir)
-				newcode := game.Start.Board.Encode(newstate)
-				if _, exists := cache[newcode]; !exists {
-					newsolution := make(Solution, len(solution))
-					copy(newsolution, solution)
-					newsolution = append(newsolution, dir)
-					cache[newcode] = newsolution
-					next = append(next, newcode)
+				if newstate, changed := state.Move(dir); changed {
+					newcode := game.Start.Board.Encode(newstate)
+					if _, exists := cache[newcode]; !exists {
+						newsolution := make(Solution, len(solution))
+						copy(newsolution, solution)
+						newsolution = append(newsolution, dir)
+						cache[newcode] = newsolution
+						next = append(next, newcode)
+					}
 				}
 			}
 			cache[code] = nil
