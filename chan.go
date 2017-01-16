@@ -4,7 +4,7 @@
 
 package cryptica
 
-var Chan = []Game{
+var setChan = []Game{
 	Game{
 		Name: "CHAN 1",
 		Start: State{

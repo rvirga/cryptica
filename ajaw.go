@@ -4,7 +4,7 @@
 
 package cryptica
 
-var Ajaw = []Game{
+var setAjaw = []Game{
 	Game{
 		Name: "AJAW 1",
 		Start: State{

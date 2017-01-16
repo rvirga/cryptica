@@ -43,26 +43,26 @@ func seqtest(t *testing.T, solver Solver, set []Game) {
 }
 
 func TestAjawDepthFirst(t *testing.T) {
-	partest(t, new(DepthFirstSolver), Ajaw)
+	partest(t, new(DepthFirstSolver), setAjaw)
 }
 
 func TestBalamDepthFirst(t *testing.T) {
-	partest(t, new(DepthFirstSolver), Balam)
+	partest(t, new(DepthFirstSolver), setBalam)
 }
 
 func TestKukDepthFirst(t *testing.T) {
 	if testing.Short() {
 		t.Skip("skipping test in short mode.")
 	}
-	partest(t, new(DepthFirstSolver), Kuk)
+	partest(t, new(DepthFirstSolver), setKuk)
 }
 
 func TestAjawBreadthFirst(t *testing.T) {
-	partest(t, new(BreadthFirstSolver), Ajaw)
+	partest(t, new(BreadthFirstSolver), setAjaw)
 }
 
 func TestBalamBreadthFirst(t *testing.T) {
-	partest(t, new(BreadthFirstSolver), Balam)
+	partest(t, new(BreadthFirstSolver), setBalam)
 }
 
 func TestKukBreadthFirst(t *testing.T) {
@@ -70,5 +70,5 @@ func TestKukBreadthFirst(t *testing.T) {
 		t.Skip("skipping test in short mode.")
 	}
 	// test sequentially to save memory
-	seqtest(t, new(BreadthFirstSolver), Kuk)
+	seqtest(t, new(BreadthFirstSolver), setKuk)
 }

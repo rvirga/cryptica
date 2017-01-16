@@ -4,7 +4,7 @@
 
 package cryptica
 
-var Kuk = []Game{
+var setKuk = []Game{
 	Game{
 		Name: "K'UK 1",
 		Start: State{
