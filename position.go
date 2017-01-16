@@ -18,14 +18,14 @@ func (pos Position) String() string {
 	return fmt.Sprintf("(%d,%d)", pos.X, pos.Y)
 }
 
-const (
-	Up    = 0
-	Down  = 1
-	Left  = 2
-	Right = 3
-)
-
 type Direction int
+
+const (
+	Up    Direction = 0
+	Down  Direction = 1
+	Left  Direction = 2
+	Right Direction = 3
+)
 
 func (dir *Direction) String() string {
 	switch *dir {
