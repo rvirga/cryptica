@@ -89,13 +89,13 @@ func (state State) String() string {
 			if tile, ok := item.(int); ok {
 				buffer.WriteString(fmt.Sprintf("%X", tile))
 			} else if empty := item.(bool); empty {
-				buffer.WriteString(".")
+				buffer.WriteRune('.')
 			} else {
-				buffer.WriteString("#")
+				buffer.WriteRune('#')
 			}
 
 		}
-		buffer.WriteString("\n")
+		buffer.WriteRune('\n')
 	}
 	return buffer.String()
 }
