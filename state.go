@@ -41,7 +41,7 @@ func (board Board) Encode(state State) (n uint64) {
 		n += (uint64(tile.Y)*uint64(board.W) + uint64(tile.X) + 1) * power
 		power *= s
 	}
-	return n
+	return
 }
 
 func (board Board) Decode(n uint64) (state State) {
@@ -53,7 +53,7 @@ func (board Board) Decode(n uint64) (state State) {
 		state.Tiles = append(state.Tiles, Position{x, y})
 		n /= s
 	}
-	return state
+	return
 }
 
 type State struct {
