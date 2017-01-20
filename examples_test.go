@@ -6,6 +6,14 @@ package cryptica
 
 import "fmt"
 
+func ExampleSolution() {
+	var solution Solution = []Direction{
+		Up, Up, Down, Left, Right, Up,
+	}
+	fmt.Printf("%v\n", solution)
+	// Output: ↑ ↑ ↓ ← → ↑
+}
+	
 func ExampleGame() {
 	var game = Game{
 		Name: "AJAW 2",
@@ -27,9 +35,15 @@ func ExampleGame() {
 		MinSteps: 10,
 	}
 	fmt.Print(game.Start)
+	// Output:
+	// .......
+	// ....##.
+	// .0.1##.
+	// ....##.
+	// ....##.
 }
 
-func ExampleDepthFirstSolver() {
+func ExampleSolver() {
 	var game Game = setChan[27]
 	var solver Solver = new(DepthFirstSolver)
 	if solution := solver.Solve(game); solution != nil {
