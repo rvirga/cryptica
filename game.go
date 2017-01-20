@@ -2,17 +2,6 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-/*
-Cryptica is a mobile game developed by Pixibots. I have no affiliation
-with the company other than being a satisfied customer. Solving a
-puzzle in Cryptica involves moving tiles on a 7x5 board to match a
-desired configuration. All tiles move symultaneously; their movements
-are, however, constrained by the board edges, and possibly also by
-some additional (unmovable) barriers.
-This Go package can search efficiently for solutions of Cryptica and
-Cryptica-like puzzles, in either depth-first or breadth-first fashion.
-Moreover, it can work on boards of arbitrary size (with some caveats).
-*/
 package cryptica
 
 import "bytes"
