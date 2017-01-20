@@ -27,8 +27,8 @@ const (
 	Right Direction = 3
 )
 
-func (dir *Direction) String() string {
-	switch *dir {
+func (dir Direction) String() string {
+	switch dir {
 	case Up:
 		return "↑"
 	case Down:
