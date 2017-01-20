@@ -6,8 +6,11 @@ package cryptica
 
 import "bytes"
 
+// Solution represents a tentative partial solution to the puzzle, and consists
+// of a sequence of steps.
 type Solution []Direction
 
+// A solution is printed as a space-separated sequence of direction steps.
 func (solution Solution) String() string {
 	var buffer bytes.Buffer
 	for i, dir := range solution {
@@ -19,6 +22,14 @@ func (solution Solution) String() string {
 	return buffer.String()
 }
 
+// Game represents single puzzle game. This comprises a name (e.g. "K'UK 32"),
+// for ease of identification, an initial configuration, a goal configuration,
+// and the minimum number of steps required to solve it.
+//
+// NOTE: in case this last number is unknown, we recommend you set it to an
+// estimated upper bound, and then try to solve using breadth-first search.
+// Breadth-first will always return the shortest solution (if there's one),
+// allowing you to determine the correct value for this field.
 type Game struct {
 	Name     string
 	Start    State
@@ -26,10 +37,20 @@ type Game struct {
 	MinSteps int
 }
 
+// The Solver interface is a generalization of the solving process. Both
+// depth-first and breadth-first solvers implement this. Given a game,
+// the Solve method should return the fist solution of length <= game.MinSteps,
+// or nil if it cannot find one.
 type Solver interface {
 	Solve(game Game) Solution
 }
 
+// The DepthFirstSolver searches for solutions in a depth-first manner.
+// It constructs a tentative solution of length game.MinSteps, backtracking
+// if necessary.
+// Although this uses a lot less memory than breadth-first search, it speeds 
+// up search by memorizing (as 64-bit numbers) the states it has already
+// examined, and therefore it will consume memory as it progresses.
 type DepthFirstSolver struct {
 }
 
@@ -61,6 +82,13 @@ func (solver DepthFirstSolver) Solve(game Game) Solution {
 	return f(game.Start, make(Solution, 0), f)
 }
 
+// BreadthFirstSolver will search for solutions in a breadth-first manner.
+// First, all solutions of length 1 will be tested, then all those of length
+// 2, and so on. If no solution of length <= game.MinSteps is found, the
+// search process will stop.
+// Although this method is usually slightly faster than depth-first search,
+// and moreover is always guaranteed to produce the shortest solution, it
+// might require massive amounts of memory to solve the most difficult games.
 type BreadthFirstSolver struct {
 }
 
