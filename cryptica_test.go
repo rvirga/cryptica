@@ -101,7 +101,7 @@ func ExampleChan28() {
 		MinSteps: 10,
 	}
 	fmt.Printf("%v\n\n%v\n", game.Name, game.Start)
-	var solver = new(DepthFirstSolver)
+	var solver Solver = new(DepthFirstSolver)
 	if solution := solver.Solve(game); solution != nil {
 		fmt.Printf("Solution: %v\n", solution)
 	}
