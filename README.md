@@ -11,7 +11,7 @@ This Go package can search efficiently for solutions of Cryptica and Cryptica-li
 
 ## History
 
-I wrote this software at the end of 2016 as part of a hands-on effort to learn Go and its development tools. I would like to thank Wojciech Smalinski at Google for introducing me to this weird but powerful programming language.
+I wrote this software in early 2017 as part of a hands-on effort to learn Go and its development tools. I would like to thank Wojciech Smalinski at Google for introducing me to this weird but powerful programming language.
 
 ## Note
 
