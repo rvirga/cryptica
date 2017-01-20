@@ -5,6 +5,7 @@
 package cryptica
 
 import (
+	"fmt"
 	"sync"
 	"testing"
 )
@@ -71,4 +72,47 @@ func TestKukBreadthFirst(t *testing.T) {
 	}
 	// test sequentially to save memory
 	seqtest(t, new(BreadthFirstSolver), setKuk)
+}
+
+func ExampleChan28() {
+	var game = Game{
+		Name: "CHAN 28",
+		Start: State{
+			Board: &Board{
+				W: 7, H: 5,
+				Walls: []Wall{
+					VerticalWall{3, 0, 1},
+					HorizontalWall{1, 1, 1},
+					HorizontalWall{1, 4, 4},
+					HorizontalWall{2, 0, 6},
+					HorizontalWall{3, 3, 3},
+					HorizontalWall{4, 1, 1},
+					HorizontalWall{4, 3, 4},
+					HorizontalWall{4, 6, 6},
+				},
+			},
+			Tiles: []Position{
+				{2, 0}, {4, 0}, {2, 4}, {5, 3},
+			},
+		},
+		Goal: []Position{
+			{0, 1}, {6, 0}, {2, 3}, {5, 4},
+		},
+		MinSteps: 10,
+	}
+	fmt.Printf("%v\n\n%v\n", game.Name, game.Start)
+	var solver = new(DepthFirstSolver)
+	if solution := solver.Solve(game); solution != nil {
+		fmt.Printf("Solution: %v\n", solution)
+	}
+	// Output:
+	// CHAN 28
+	// 
+	// ..0#1..
+	// .#.##..
+	// #######
+	// ...#.3.
+	// .#2##.#
+	//
+	// Solution: → ← ↓ ← ↑ → ← ↓ → →
 }
