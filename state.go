@@ -51,7 +51,9 @@ type Board struct {
 // IMPORTANT: use of this encoding is critical in the implementation of this
 // package, and therefore limits the size/complexity of the games that it
 // can tackle. More precisely, given a WxH board, we cannot solve games
-// involving more than 64 * log(2) / log(W*H+1) tiles.
+// involving more than 64 * log(2) / log(W*H+1) tiles. This works out OK
+// for all Cryptica puzzles, but if you use this package on puzzles of your
+// own creation, you should keep in mind this limitation.
 func (board Board) Encode(state State) (n uint64) {
 	n = 0
 	power, s := uint64(1), uint64(board.W)*uint64(board.H)+1
@@ -170,9 +172,8 @@ func (state State) Move(dir Direction) (State, bool) {
 	return State{state.Board, tiles}, changed
 }
 
-// Goal specifies the goal positions of the first k of the n tiles k <= n.
+// Goal specifies the goal positions of the first k of the n tiles (k <= n).
 // For tiles k, k+1, n-1, any position will do.
-
 type Goal []Position
 
 // Checks if a state matches the goal, by verifying that all the tiles we care

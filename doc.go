@@ -31,3 +31,7 @@
 	programming language.
 */
 package cryptica
+
+// BUG(rvirga): This package works only with games where the size of the board
+// and the number of tiles are small enough to allow any game configuration to
+// be encoded by a 64-bit number. See the Encode method for details.
