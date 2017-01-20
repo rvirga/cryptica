@@ -3,7 +3,7 @@
 
 ## Context
 
-[Cryptica](https://play.google.com/store/apps/details?id=pixibots.games.cryptica.com) is a mobile game developed by Pixibots. I have no affiliation with the company other than being a satisfied customer. Solving a puzzle in Cryptica involves moving tiles on a 7x5 board to match a desired configuration. All tiles move symultaneously; their movements is, however, constrained by the board edges, and possibly also by some additional (unmovable) barriers.
+[Cryptica](https://play.google.com/store/apps/details?id=pixibots.games.cryptica.com) is a mobile game developed by Pixibots. I have no affiliation with the company other than being a satisfied customer. Solving a puzzle in Cryptica involves moving tiles on a 7x5 board to match a desired configuration. All tiles move symultaneously; their movements are, however, constrained by the board edges, and possibly also by some additional (unmovable) barriers.
 
 ## Description
 
