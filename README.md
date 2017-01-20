@@ -13,6 +13,10 @@ This Go package can search efficiently for solutions of Cryptica and Cryptica-li
 
 I wrote this software in early 2017 as part of a hands-on effort to learn Go and its development tools. I would like to thank Wojciech Smalinski at Google for introducing me to this weird but powerful programming language.
 
+## Documentation
+
+https://godoc.org/github.com/rvirga/cryptica
+
 ## Note
 
 If you came here just looking for the solutions of the game, these are listed below. They have been generated
