@@ -52,8 +52,9 @@ type Board struct {
 // package, and therefore limits the size/complexity of the games that it
 // can tackle. More precisely, given a WxH board, we cannot solve games
 // involving more than 64 * log(2) / log(W*H+1) tiles. This works out OK
-// for all Cryptica puzzles, but if you use this package on puzzles of your
-// own creation, you should keep in mind this limitation.
+// for Cryptica (with a 7x5 board we can use up to 12 tiles, which
+// is more than any Cryptica puzzle requires), but if you use this package on
+// puzzles of your // own creation, you should keep in mind this limitation.
 func (board Board) Encode(state State) (n uint64) {
 	n = 0
 	power, s := uint64(1), uint64(board.W)*uint64(board.H)+1
