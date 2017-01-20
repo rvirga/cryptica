@@ -17,7 +17,7 @@
 
 
 	Description
-	
+
 	This Go package can search efficiently for solutions of Cryptica and
 	Cryptica-like puzzles, in either depth-first or breadth-first fashion.
 	Moreover, it can work on boards of arbitrary size (with some caveats).
