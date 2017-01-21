@@ -13,7 +13,7 @@ func ExampleSolution() {
 	fmt.Printf("%v\n", solution)
 	// Output: ↑ ↑ ↓ ← → ↑
 }
-	
+
 func ExampleGame() {
 	var game = Game{
 		Name: "AJAW 2",

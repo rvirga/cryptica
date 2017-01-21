@@ -4,7 +4,10 @@
 
 package cryptica
 
-import "bytes"
+import (
+	"bytes"
+	"math"
+)
 
 // Solution represents a tentative partial solution to the puzzle, and consists
 // of a sequence of steps.
@@ -37,6 +40,16 @@ type Game struct {
 	MinSteps int
 }
 
+// This method determines if the size of the board and the number of tiles
+// are such that the requirements for this package to work (that is, that
+// any game configuration can be uniquely encoded by a 64-bit number) are
+// met.
+func (game Game) Encodeable() bool {
+	size := float64(game.Start.Board.W * game.Start.Board.H)
+	maxTiles := int(math.Floor(64 * math.Log(2) / math.Log(size+1)))
+	return len(game.Start.Tiles) <= maxTiles
+}
+
 // The Solver interface is a generalization of the solving process. Both
 // depth-first and breadth-first solvers implement this. Given a game,
 // the Solve method should return the fist solution of length <= game.MinSteps,
@@ -48,13 +61,17 @@ type Solver interface {
 // The DepthFirstSolver searches for solutions in a depth-first manner.
 // It constructs a tentative solution of length game.MinSteps, backtracking
 // if necessary.
-// Although this uses a lot less memory than breadth-first search, it speeds 
+// Although this uses a lot less memory than breadth-first search, it speeds
 // up search by memorizing (as 64-bit numbers) the states it has already
 // examined, and therefore it will consume memory as it progresses.
 type DepthFirstSolver struct {
 }
 
 func (solver DepthFirstSolver) Solve(game Game) Solution {
+	// sanity check
+	if !game.Encodeable() {
+		return nil
+	}
 	cache := make(map[uint64]int)
 	f := func(state State, solution Solution, k interface{}) Solution {
 		n := len(solution)
@@ -93,6 +110,10 @@ type BreadthFirstSolver struct {
 }
 
 func (solver BreadthFirstSolver) Solve(game Game) Solution {
+	// sanity check
+	if !game.Encodeable() {
+		return nil
+	}
 	cache := make(map[uint64]Solution)
 	var current, next []uint64
 	{
