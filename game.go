@@ -44,7 +44,7 @@ type Game struct {
 // are such that the requirements for this package to work (that is, that
 // any game configuration can be uniquely encoded by a 64-bit number) are
 // met.
-func (game Game) Encodeable() bool {
+func (game Game) Encodable() bool {
 	size := float64(game.Start.Board.W * game.Start.Board.H)
 	maxTiles := int(math.Floor(64 / math.Log2(size+1)))
 	return len(game.Start.Tiles) <= maxTiles
@@ -69,7 +69,7 @@ type DepthFirstSolver struct {
 
 func (solver DepthFirstSolver) Solve(game Game) Solution {
 	// sanity check
-	if !game.Encodeable() {
+	if !game.Encodable() {
 		return nil
 	}
 	cache := make(map[uint64]int)
@@ -111,7 +111,7 @@ type BreadthFirstSolver struct {
 
 func (solver BreadthFirstSolver) Solve(game Game) Solution {
 	// sanity check
-	if !game.Encodeable() {
+	if !game.Encodable() {
 		return nil
 	}
 	cache := make(map[uint64]Solution)
