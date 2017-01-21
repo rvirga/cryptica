@@ -46,7 +46,7 @@ type Game struct {
 // met.
 func (game Game) Encodeable() bool {
 	size := float64(game.Start.Board.W * game.Start.Board.H)
-	maxTiles := int(math.Floor(64 * math.Log(2) / math.Log(size+1)))
+	maxTiles := int(math.Floor(64 / math.Log2(size+1)))
 	return len(game.Start.Tiles) <= maxTiles
 }
 
